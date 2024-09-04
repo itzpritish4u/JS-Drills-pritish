@@ -8,7 +8,6 @@ const getEmails = () => {
     return emails;
 }
 
-
 // To retrieves and prints the hobbies of individuals with a specific age, say 30 years old.
 const getHobbiesByAge = (age) => {
     const hobbies = [];
