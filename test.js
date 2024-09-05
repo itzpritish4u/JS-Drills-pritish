@@ -6,6 +6,7 @@ const testGetEmails = () => {
     console.log(getEmails(arrayOfObjects));
     console.log(getEmails([]));
     console.log(getEmails("arrayOfObjects"));
+    console.log(getEmails(undefined ));
 }
 
 // Test for getHobbiesByAge
