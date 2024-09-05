@@ -1,5 +1,5 @@
 
-const arrayOfObjects = [
+export const arrayOfObjects = [
    { 
       id: 1, 
       name: 'Alice', 
@@ -120,4 +120,4 @@ const arrayOfObjects = [
  //    Implement a loop to access and log the city and country of each individual in the dataset.
  
 
-export default arrayOfObjects;
+// export default arrayOfObjects;
