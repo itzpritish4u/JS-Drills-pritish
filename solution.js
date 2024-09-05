@@ -1,5 +1,8 @@
 // To accesses and returns the email addresses of all individuals.
 const getEmails = (arrayOfObjects) => {
+    if (!arrayOfObjects || arrayOfObjects.length === 0 || !Array.isArray(arrayOfObjects)) {
+        return "The array is empty or undefined.";
+    }
     const emails = [];
     for (let i = 0; i < arrayOfObjects.length; i++) {
         emails.push(arrayOfObjects[i].email);
@@ -26,8 +29,12 @@ const getAustralianStudents = (arrayOfObjects) => {
 }
 
 // To accesses and logs the name and city of the individual at the index position 3 in the dataset.
-const getNameAndCityAtIndex = (arrayOfObjects, index) => {
-    console.log(arrayOfObjects[3].name, " ",  arrayOfObjects[3].city);
+const getNameAndCityAtIndex = (arrayOfObjects) => {
+    if (!arrayOfObjects || arrayOfObjects.length === 0) {
+        console.log("The array is empty or undefined.");
+        return;
+    }
+    console.log(`Name: ${arrayOfObjects[3].name}, City: ${arrayOfObjects[3].city}`);
 }
 
 // To access and print the ages of all individuals in the dataset.

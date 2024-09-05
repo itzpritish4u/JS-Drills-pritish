@@ -26,10 +26,8 @@ const testGetAustralianStudents = () => {
 // Test for getNameAndCityAtIndex
 const testGetNameAndCityAtIndex = () => {
     getNameAndCityAtIndex(arrayOfObjects);
-    getNameAndCityAtIndex(arrayOfObjects, 20);
-    getNameAndCityAtIndex([], 3);
-    getNameAndCityAtIndex(arrayOfObjects, arrayOfObjects.length);
-    getNameAndCityAtIndex(arrayOfObjects, -7);
+    getNameAndCityAtIndex([]);
+    getNameAndCityAtIndex([45, 67, 72, 86, 97]);
 }
 
 // Test for getAllAges
