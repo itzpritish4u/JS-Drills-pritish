@@ -1,4 +1,4 @@
-const users = {
+export const users = {
     "John": {
         age: 24,
         desgination: "Senior Golang Developer",
