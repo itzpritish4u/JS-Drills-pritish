@@ -8,5 +8,13 @@ const getUsersInterestedInVideoGames = (users) => {
     }
 }
 
-
-
+// To find all users staying in Germany.
+const findUsersInGermany = (users) => {
+    const result = [];
+    for (let user in users) {
+        if (users[user].nationality === "Germany") {
+            result.push(user);
+        }
+    }
+    return result;
+}
