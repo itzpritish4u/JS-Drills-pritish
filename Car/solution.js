@@ -68,3 +68,16 @@ export const getOlderCars = (inventory) => {
     return older_cars_years;
 }
 
+export const getBMWAndAudi = (inventory) => {
+    if (inventory === undefined || !Array.isArray(inventory) || inventory.length  === 0) {
+        return "inventory not found";
+    }
+    const bmwAndAudi = [];
+    for (const obj of inventory) {
+        if (typeof obj.car_make === 'string' && typeof obj.car_model === 'string' && (obj.car_make === "BMW" || obj.car_make === "Audi")) {
+            bmwAndAudi.push(`${obj.car_make} : ${obj.car_model}`);
+        }
+    }
+    console.log(JSON.stringify(bmwAndAudi));
+    return bmwAndAudi;
+}

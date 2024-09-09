@@ -40,8 +40,16 @@ const testGetOlderCars = () => {
     console.log(getOlderCars([{car_year: -1978}, {car_year: "2010"}]));
 }
 
+const testGetBMWAndAudi = () => {
+    console.log(getBMWAndAudi(inventory));
+    console.log(getBMWAndAudi([]));
+    console.log(getBMWAndAudi([{car_make: 'Toyota', car_model: 'abc'}, {car_make: 'Audi', car_model: 'xyz'}]));
+    console.log(getBMWAndAudi([{car_make: [4,6,8], car_model: 'abc'}, {car_make: 'Audi', car_model: 675}]));
+}
+
 testFindCarById();
 testGetLastCar();
 testSortCarModels();
 testGetCarYears();
 testGetOlderCars();
+testGetBMWAndAudi();
