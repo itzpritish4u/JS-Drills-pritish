@@ -37,3 +37,16 @@ export const sortCarModels = (inventory) => {
 
     return car_models.sort();
 }
+
+export const getCarYears = (inventory) => {
+    if (inventory === undefined || !Array.isArray(inventory) || inventory.length  === 0) {
+        return "inventory not found";
+    }
+    const car_years = [];
+    for (const obj of inventory) {
+        if (typeof obj.car_year ===  'number' && obj.car_year > 1900 && obj.car_year < 2024) {
+            car_years.push(obj.car_year);
+        }
+    }
+    return car_years;
+}

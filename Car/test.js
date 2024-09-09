@@ -26,7 +26,14 @@ const testSortCarModels = () => {
     console.log(sortCarModels("Model: Bugatti"));
 }
 
+const testGetCarYears = () => {
+    console.log(getCarYears(inventory));
+    console.log(getCarYears({str:["ghi"],num:[56]}));
+    console.log(getCarYears([{id: 1,  car_model: 'Toyota', car_make: 'Camry', car_year: "2015", car_color: 'Blue'}, {id: 2,  car_model: 'Z9', car_make: 'Yamaha', car_year: 1998, car_color: 'Grey'}]));
+    console.log(getCarYears([{id: 1,  car_model: 'Toyota', car_make: 'Camry', car_year: 15, car_color: 'Blue'}, {id: 2,  car_model: 'Z9', car_make: 'Yamaha', car_year: 1967, car_color: 'Grey'}]));
+}
 
 testFindCarById();
 testGetLastCar();
 testSortCarModels();
+testGetCarYears();
