@@ -13,5 +13,6 @@ console.log("\nSum of Items:", sum);
 const foundElement = find(items, (element) => element > 3);
 console.log("\nFound Element:", foundElement);
 
-
+const filteredItems = filter(items, (element) => element > 3);
+console.log("\nFiltered Items:", filteredItems);
 
