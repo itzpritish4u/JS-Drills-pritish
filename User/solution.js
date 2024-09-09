@@ -25,3 +25,17 @@ export const findUsersInGermany = (users) => {
     }
     return result;
 }
+
+// To find all users with masters Degree.
+export const findUsersWithMastersDegree = (users) => {
+    if (typeof users !== 'object' || Object.keys(users).length === 0 || users === undefined) {
+        return "Error: Input is either not a valid object or is empty.";
+    }
+    const result = [];
+    for (let user in users) {
+        if (users[user].qualification === "Masters") {
+            result.push(user);
+        }
+    }
+    return result;
+}

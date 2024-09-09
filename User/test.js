@@ -17,5 +17,16 @@ const testFindUsersInGermany = () => {
     console.log(findUsersInGermany({Ezekiel: {nationality:"Germany"}}));
 }
 
+// Test for findUsersWithMastersDegree
+const testfindUsersWithMastersDegree = () => {
+    console.log(findUsersWithMastersDegree(undefined));
+    console.log(findUsersWithMastersDegree(users));
+    console.log(findUsersWithMastersDegree(81));
+    console.log(findUsersWithMastersDegree(NaN));
+    console.log(findUsersWithMastersDegree({Tony:{qualification:"Diploma"}}));
+    console.log(findUsersWithMastersDegree({Clark:{qualification:"Masters"}}));
+}
+
 testGetUsersInterestedInVideoGames();
 testFindUsersInGermany();
+testfindUsersWithMastersDegree();
