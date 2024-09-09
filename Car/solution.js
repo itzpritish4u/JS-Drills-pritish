@@ -10,3 +10,16 @@ export const findCarById = (inventory) => {
     }
     return  "Car not found";
 }
+
+export const getLastCar = (inventory) => {
+    if (inventory === undefined || !Array.isArray(inventory) || inventory.length  === 0) {
+        return "inventory not found";
+    }
+    if (typeof inventory[inventory.length - 1].car_make !== 'string') {
+        return "car maker not found";
+    }
+    if (typeof inventory[inventory.length - 1].car_model !== 'string') {
+        return "car model not found";
+    }
+    return `Last car is a ${inventory[inventory.length - 1].car_make} ${inventory[inventory.length - 1].car_model}`;
+}
