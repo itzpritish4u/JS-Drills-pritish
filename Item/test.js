@@ -10,7 +10,8 @@ console.log("\nMapped Array:", mapped);
 const sum = reduce(items, (accumulator, element) => accumulator + element, 0);
 console.log("\nSum of Items:", sum);
 
-
+const foundElement = find(items, (element) => element > 3);
+console.log("\nFound Element:", foundElement);
 
 
 
