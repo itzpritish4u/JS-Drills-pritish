@@ -50,3 +50,21 @@ export const getCarYears = (inventory) => {
     }
     return car_years;
 }
+
+export const getOlderCars = (inventory) => {
+    if (inventory === undefined || !Array.isArray(inventory) || inventory.length  === 0) {
+        return "inventory not found";
+    }
+    const older_cars_years = [];
+    const car_years = getCarYears(inventory);
+    
+    for (let  i = 0; i < car_years.length; i++) {
+        if (car_years[i] < 2000) {
+            older_cars_years.push(car_years[i]);
+        }
+    }
+    
+    console.log(`Number of cars older than the year 2000: ${older_cars_years.length}`);
+    return older_cars_years;
+}
+
