@@ -43,3 +43,17 @@ export function filter(elements, cb) {
     return result;
 }
 
+export const nestedArray = [1, [2], [[3]], [[[4]]]];
+
+export function flatten(elements) {
+    const flattened = [];
+    for (let i = 0; i < elements.length; ++i) {
+        const element = elements[i];
+        if (Array.isArray(element)) {
+            flattened.push(...flatten(element));
+        } else {
+            flattened.push(element);
+        }
+    }
+    return flattened;
+}

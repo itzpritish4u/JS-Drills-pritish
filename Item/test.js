@@ -16,3 +16,5 @@ console.log("\nFound Element:", foundElement);
 const filteredItems = filter(items, (element) => element > 3);
 console.log("\nFiltered Items:", filteredItems);
 
+const flatArray = flatten(nestedArray);
+console.log("\nFlattened Array:", flatArray);
