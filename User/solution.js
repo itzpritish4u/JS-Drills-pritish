@@ -39,3 +39,36 @@ export const findUsersWithMastersDegree = (users) => {
     }
     return result;
 }
+
+// To group users based on their Programming language mentioned in their designation.
+export const groupUsersByProgrammingLanguage = (users) => {
+    if (users === undefined || typeof users !== 'object' || Object.keys(users).length === 0) {
+        return "Error: Input is either not a valid object or is empty.";
+    }
+    
+    const result = {
+        Java: [],
+        Python: [],
+        JavaScript: [],
+        Golang: [],
+        Others: []
+    }
+
+    for (const user in users) {
+        if (users[user].designation) {
+            if (users[user].designation.toLowerCase().includes("golang")) {
+                result.Golang.push(user);
+            } else if (users[user].designation.toLowerCase().includes("javascript")) {
+                result.JavaScript.push(user);
+            } else if (users[user].designation.toLowerCase().includes("python")) {
+                result.Python.push(user);
+            } else if (users[user].designation.toLowerCase().includes("java")) {
+                result.Java.push(user);
+            } else {
+                result.Others.push(user);
+            }
+        }   
+    }
+
+    return result;
+}

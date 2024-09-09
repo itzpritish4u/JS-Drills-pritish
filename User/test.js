@@ -27,6 +27,15 @@ const testfindUsersWithMastersDegree = () => {
     console.log(findUsersWithMastersDegree({Clark:{qualification:"Masters"}}));
 }
 
+// Test for groupUsersByProgrammingLanguage
+const testGroupUsersByProgrammingLanguage = () => {
+    console.log(groupUsersByProgrammingLanguage(users));
+    console.log(groupUsersByProgrammingLanguage({Bryan:{designation:"Jr Java Developer"}, Merry:{designation:"Javascript Developer"}}));
+    console.log(groupUsersByProgrammingLanguage({Philips:{designation:"Data Scientist"}}));
+    console.log(groupUsersByProgrammingLanguage(""));
+}
+
 testGetUsersInterestedInVideoGames();
 testFindUsersInGermany();
 testfindUsersWithMastersDegree();
+testGroupUsersByProgrammingLanguage();
