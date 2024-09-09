@@ -4,7 +4,8 @@ each(items, (element, index) => {
   console.log(`Element: ${element}, Index: ${index}`);
 });
 
-
+const mapped = map(items, (element) => element * 2);
+console.log("\nMapped Array:", mapped);
 
 
 

@@ -6,7 +6,13 @@ export function each(elements, cb) {
     }
 }
 
-
+export function map(elements, cb) {
+    const result = [];
+    for (let i = 0; i < elements.length; ++i) {
+        result[i] = cb(elements[i], i);
+    }
+    return result;
+}
 
 
 
