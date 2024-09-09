@@ -18,5 +18,15 @@ const testGetLastCar = () => {
     console.log(getLastCar([]));
 }
 
+const testSortCarModels = () => {
+    console.log(sortCarModels(inventory));
+    console.log(sortCarModels([{id: 1,  car_model: [1,2,3], car_make: 'Camry', car_year: 2015, car_color: 'Blue'}, {id: 2,  car_model: 'Z9', car_make: 'Yamaha', car_year: 1998, car_color: 'Grey'}]));
+    console.log(sortCarModels([{id: 1,  car_model: '', car_make: 'Camry', car_year: 2015, car_color: 'Blue'}, {id: 2,  car_model: 'Z9', car_make: 'Yamaha', car_year: 1998, car_color: 'Grey'}]));
+    console.log(sortCarModels([1, 4, 5]));
+    console.log(sortCarModels("Model: Bugatti"));
+}
+
+
 testFindCarById();
 testGetLastCar();
+testSortCarModels();

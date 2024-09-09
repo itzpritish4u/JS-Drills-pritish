@@ -23,3 +23,17 @@ export const getLastCar = (inventory) => {
     }
     return `Last car is a ${inventory[inventory.length - 1].car_make} ${inventory[inventory.length - 1].car_model}`;
 }
+
+export const sortCarModels = (inventory) => {
+    if (inventory === undefined || !Array.isArray(inventory) || inventory.length  === 0) {
+        return "inventory not found";
+    }
+    const car_models = [];
+    for (const obj of inventory) {
+        if (obj.car_model !== undefined && typeof obj.car_model === 'string' && obj.car_model.length > 0) {
+            car_models.push(obj.car_model);
+        }
+    }
+
+    return car_models.sort();
+}
