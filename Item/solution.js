@@ -14,7 +14,15 @@ export function map(elements, cb) {
     return result;
 }
 
-
+export function reduce(elements, cb, startingValue) {
+    let accumulator = startingValue === undefined ? elements[0] : startingValue;
+    let i = startingValue === undefined ? 1 : 0;
+    
+    for (; i < elements.length; ++i) {
+        accumulator = cb(accumulator, elements[i]);
+    }
+    return accumulator;
+}
 
 
 
