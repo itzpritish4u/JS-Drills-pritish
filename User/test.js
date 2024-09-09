@@ -9,4 +9,13 @@ const testGetUsersInterestedInVideoGames = () => {
     console.log(getUsersInterestedInVideoGames({interests:["Piano, Swimming and Reading"]}));
 }
 
+// Test for findUsersInGermany
+const testFindUsersInGermany = () => {
+    console.log(findUsersInGermany(users));
+    console.log(findUsersInGermany(users.Ron));
+    console.log(findUsersInGermany({nationality:"Japan"}));
+    console.log(findUsersInGermany({Ezekiel: {nationality:"Germany"}}));
+}
+
 testGetUsersInterestedInVideoGames();
+testFindUsersInGermany();
