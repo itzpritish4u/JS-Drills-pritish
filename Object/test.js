@@ -5,3 +5,6 @@ console.log(keys(testObject));
 
 // Implementing values()
 console.log(values(testObject));
+
+// Testing mapObject()
+console.log(mapObject(testObject, (key, value) => value.toString().toUpperCase()));

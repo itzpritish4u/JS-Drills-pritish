@@ -17,3 +17,11 @@ export function values(obj) {
     }
     return values;
 }
+
+export function mapObject(obj, cb) {
+    const result = {};
+    for (let key in obj) {
+        result[key] = cb(key, obj[key]);
+    }
+    return result;
+}
