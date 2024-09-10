@@ -19,3 +19,16 @@ export function limitFunctionCallCount(cb, n) {
     }
 }
 
+export function cacheFunction(cb) {
+    const cache = {};
+
+    return function (...args) {
+        const key = JSON.stringify(args);
+        if (cache.hasOwnProperty(key)) {
+            return cache[key];
+        }
+        const result = cb(...args);
+        cache[key] = result;
+        return result;
+    }
+}
