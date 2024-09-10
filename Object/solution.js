@@ -45,3 +45,12 @@ export function invert(obj) {
     }
     return inverted;
 }
+
+export function defaults(obj, defaultProps) {
+    for (let key in obj) {
+        if (obj[key] === undefined) {
+            obj[key] = defaultProps[key];
+        }
+    }
+    return obj;
+}

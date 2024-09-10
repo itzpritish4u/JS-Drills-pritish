@@ -15,3 +15,6 @@ console.log(pairs(testObject));
 // Testing invert()
 console.log(invert(testObject));
 
+// Testing defaults()
+const defaultProps = { age: 40, occupation: 'Business' };
+console.log(defaults(testObject, defaultProps));
