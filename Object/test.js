@@ -11,3 +11,7 @@ console.log(mapObject(testObject, (key, value) => value.toString().toUpperCase()
 
 // Testing pairs()
 console.log(pairs(testObject));
+
+// Testing invert()
+console.log(invert(testObject));
+
