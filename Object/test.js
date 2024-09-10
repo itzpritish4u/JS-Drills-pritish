@@ -8,3 +8,6 @@ console.log(values(testObject));
 
 // Testing mapObject()
 console.log(mapObject(testObject, (key, value) => value.toString().toUpperCase()));
+
+// Testing pairs()
+console.log(pairs(testObject));
