@@ -6,3 +6,16 @@ export function counterFactory() {
     }
     return obj;
 }
+
+export function limitFunctionCallCount(cb, n) {
+    let callCount = 0;
+
+    return function (...args) {
+        if (callCount < n) {
+            callCount += 1;
+            return cb(...args);
+        }
+        return null;
+    }
+}
+
