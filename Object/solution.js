@@ -7,3 +7,13 @@ export function keys(obj) {
     }
     return keys;
 }
+
+export function values(obj) {
+    const values = [];
+    for (let key in obj) {
+        if (typeof obj[key] !== 'function') {
+            values.push(obj[key]);
+        }
+    }
+    return values;
+}
